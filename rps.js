@@ -1,19 +1,19 @@
-console.log("Hello World!");
+let humanScore = 0;
+let computerScore = 0;
+let round = 0;
 
 function getComputerChoice(){
     let genNum = Math.random();
-    let compChoice;
-
     if (genNum < .33) {
-        compChoice = 0;
+        return "rock";
     }
 
     else if ( genNum < .67) {
-        compChoice = 1;
+        return "paper";
     }
 
     else {
-        compChoice = 2;
+        return "scissors";
     }
 
     return compChoice;
@@ -23,9 +23,35 @@ function getComputerChoice(){
 
 function getHumanChoice() {
     let humChoice;
-    humChoice = parseInt(prompt("Enter one of the following numbers :0(rock), 1(paper), 2(scissors)"));
-    return humChoice;
+    humChoice = (prompt("Enter one of the following: rock, paper, scissors"));
+        return humChoice;
 }
 
-console.log(getComputerChoice());
-console.log(getHumanChoice());
+function playRound(humanChoice, computerChoice) {
+    humanChoice = humanChoice.toLowerCase();
+    if (humanChoice === computerChoice) {
+        console.log(`It's a tie! Both chose ${humanChoice}`);
+    }
+
+    else if (
+            (humanChoice === "rock" && computerChoice === "scissors") ||
+            (humanChoice === "paper" && computerChoice === "rock") ||
+            (humanChoice === "scissors" && computerChoice === "paper") )
+            {
+                console.log(`You Win! ${humanChoice} beats ${computerChoice}.`);
+                humanScore ++;
+            }
+
+    else {
+        console.log(`You Lose! ${computerChoice} beats ${humanChoice}.`);
+                computerScore ++;
+    }
+
+}
+
+while (round < 6) { 
+playRound(getHumanChoice(), getComputerChoice());
+round ++;
+}
+console.log(`Your Score: ${humanScore}`);
+console.log(`Computer Score: ${computerScore}`);
