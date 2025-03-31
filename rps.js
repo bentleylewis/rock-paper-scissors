@@ -1,6 +1,8 @@
 const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
 const resultDisplay = document.getElementById("resultDisplay");
+const computerScoreDisplay = document.getElementById("computerScoreDisplay");
+const playerScoreDisplay = document.getElementById("playerScoreDisplay");
 const choices = ["rock", "paper", "scissors"]
 let playerScore = 0;
 let computerScore = 0;
@@ -30,7 +32,17 @@ resultDisplay.textContent = result;
 playerDisplay.textContent = `Player: ${playerChoice}`;
 computerDisplay.textContent = `Computer: ${computerChoice}`;
 
+    switch(result) {
+        case "You Win!":
+            playerScore ++;
+            break;
+        case "You Lose!":
+            computerScore ++;
+            break;
+    }
 
 
+playerScoreDisplay.textContent = `You: ${playerScore}`;
+computerScoreDisplay.textContent = `Computer: ${computerScore}`;
 
 }
