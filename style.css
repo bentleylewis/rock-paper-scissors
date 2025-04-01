@@ -21,6 +21,20 @@ body {
     padding: 24px;
 }
 
+.header button {
+    font-family: "Taggy";
+    font-size: 20px;
+    cursor:pointer;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(231, 225, 212);
+    transition: background-color 0.3s ease;
+
+}
+
+.header button:hover {
+    background-color: rgb(255, 255, 255);
+}
+
 .choices {
     margin-bottom: 50px;
 }
@@ -45,20 +59,27 @@ body {
 }
 
 #playerDisplay, #computerDisplay {
-    font-size: 24px;
+    font-size: 28px;
     color: rgb(231, 225, 212);   
     text-align: center; 
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
 #resultDisplay {
-    font-size: 48px;
+    font-size: 36px;
     text-align: center;
-    color: rgb(231, 225, 212);
-    margin: 20px;
+    color: rgb(231, 225, 212); 
+    margin: 40px;
+    font-weight: bold;
 }
 
 #playerScoreDisplay, #computerScoreDisplay {
+    font-size: 28px;
+    color: rgb(231, 225, 212);
+}
+
+
+#gameResultDisplay {
     font-size: 24px;
     color: rgb(231, 225, 212);
 }

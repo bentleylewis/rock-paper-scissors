@@ -9,6 +9,7 @@
 <body>
   <header class="header">
       <h1> Rock Paper Scissors</h1>
+      <button onclick="resetGame()">Reset Game</button>
   </header>
   
   <div class="choices">
@@ -16,17 +17,18 @@
     <button onclick="playRound('paper')">✋🏿</button>
     <button onclick="playRound('scissors')">✌🏿</button>
   </div>
-  
+
   <div class="outcomeSection">
-    <div id="playerDisplay">Make A Decision </div>
-    <div id="computerDisplay">With Haste </div>
-    <div id="resultDisplay">Best of 5, Begin!</div>
+    <div id="playerDisplay"></div>
+    <div id="computerDisplay"></div>
+    <div id="resultDisplay">Choose rock, paper, or scissors!</div>
   </div>
 
   <div id="playerScoreDisplay">Your score: 0</div>
   <div id="computerScoreDisplay">Computer's score: 0</div>
 
-
+  <div id="gameResultDisplay"></div>
+ 
 
   <script src="rps.js"></script>
 </body>
