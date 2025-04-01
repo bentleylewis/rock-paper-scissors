@@ -48,3 +48,8 @@ computerScoreDisplay.textContent = `Computer's score: ${computerScore}`;
 
 }
 
+function checkScore(playerScore, computerScore) {
+    if (playerScore >= 5|| computerScore >= 5) {
+        
+    }
+}
