@@ -7,6 +7,7 @@ const choices = ["rock", "paper", "scissors"]
 let playerScore = 0;
 let computerScore = 0;
 
+
 function playRound(playerChoice) {
     let computerChoice = choices[Math.floor(Math.random() * 3)];
     let result = "";    
@@ -29,7 +30,7 @@ function playRound(playerChoice) {
     }
 
 resultDisplay.textContent = result;
-playerDisplay.textContent = `Player: ${playerChoice}`;
+playerDisplay.textContent = `You: ${playerChoice}`;
 computerDisplay.textContent = `Computer: ${computerChoice}`;
 
     switch(result) {
@@ -42,7 +43,8 @@ computerDisplay.textContent = `Computer: ${computerChoice}`;
     }
 
 
-playerScoreDisplay.textContent = `You: ${playerScore}`;
-computerScoreDisplay.textContent = `Computer: ${computerScore}`;
+playerScoreDisplay.textContent = `Your score: ${playerScore}`;
+computerScoreDisplay.textContent = `Computer's score: ${computerScore}`;
 
 }
+
