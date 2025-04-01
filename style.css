@@ -28,13 +28,14 @@ body {
     min-height: 150px;
     margin: 0px 32px;
     border-radius: 20px;
-    background-color: rgb(7, 71, 123);
-    cursor:pointer;
+    border: 2px solid rgba(0, 0, 0, 0.412);
+    background-color: rgb(221, 133, 197);
     transition: background-color 0.3s ease;
 }
 
 
 .choices button:hover{
-    background-color:rgb(12, 96, 165);
+    background-color:rgb(237, 177, 221);
+    cursor:pointer;
 
 }
